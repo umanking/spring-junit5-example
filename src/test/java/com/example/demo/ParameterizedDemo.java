@@ -76,8 +76,9 @@ public class ParameterizedDemo {
     }
 
 
-    enum Fruit {
-        APPLE, ORANGE, BANANA;
+
+
+    enum Fruit {        APPLE, ORANGE, BANANA;
 
     }
 }

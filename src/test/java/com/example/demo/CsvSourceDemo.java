@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ArgumentsSource;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -36,5 +37,12 @@ public class CsvSourceDemo {
 
     void print(String value, int num) {
         System.out.println(value + ", " + num);
+    }
+
+    @ParameterizedTest
+    @ArgumentsSource(MyArgumentsProvider.class)
+    void testWithArgumentsSource(String argument) {
+        System.out.println(argument);
+
     }
 }

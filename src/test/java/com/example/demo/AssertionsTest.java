@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
@@ -69,6 +70,7 @@ public class AssertionsTest {
     }
 
     @Test
+    @Disabled
     void timeoutExceeded() {
 
         assertTimeout(Duration.ofMillis(10), ()-> {

@@ -1,5 +1,6 @@
 package com.example.demo;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -23,6 +24,7 @@ public class AssumtionsTest {
     }
 
     @Test
+    @Disabled
     void testOnlyDeveloperWorkstation() {
         assertTrue("DEV".equals(System.getenv("ENV")),
                 () -> "Aborting test: not on developer workstation");

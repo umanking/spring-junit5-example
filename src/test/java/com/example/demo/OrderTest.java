@@ -14,6 +14,7 @@ public class OrderTest {
 
 
     @Test
+    // jupiter order annotation (not spring bean order annotation)
     @Order(1)
     void nullValue() {
 

@@ -4,7 +4,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.EnumSource;
 import org.junit.jupiter.params.provider.NullAndEmptySource;
-import org.junit.jupiter.params.provider.NullSource;
 import org.junit.jupiter.params.provider.ValueSource;
 import org.junit.platform.commons.util.StringUtils;
 
@@ -29,7 +28,7 @@ public class ParameterizedDemo {
     }
 
     @ParameterizedTest
-    @ValueSource(ints = { 1, 2, 3 })
+    @ValueSource(ints = {1, 2, 3})
     void testWithValueSource(int argument) {
         assertTrue(argument > 0 && argument < 4);
     }
@@ -74,11 +73,8 @@ public class ParameterizedDemo {
         System.out.println(unit);
         assertTrue(unit.name().endsWith("DAYS"));
     }
-
-
-
-
-    enum Fruit {        APPLE, ORANGE, BANANA;
+    enum Fruit {
+        APPLE, ORANGE, BANANA;
 
     }
 }
